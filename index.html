@@ -16,13 +16,13 @@
         }
 
         :root {
-            --primary: rgba(181, 0, 21, 1);
-            --primary-dark: rgba(181, 0, 21, 1);
+            --primary: #8E0D03;
+            --primary-dark: #8E0D03;
             --primary-light: #FAFAFA;
             --accent: #C92929;
             --text: #2D3748;
-            --text-light: #718096;
-            --bg: #FAFAFA;
+            --text-light: #264D4D;
+            --bg: #D7E1E1;
             --white: #FFFFFF;
         }
 
@@ -102,8 +102,7 @@
             display: flex;
             align-items: center;
             padding: 6rem 2rem 4rem;
-background: #b50015;
-background: radial-gradient(circle, rgba(181, 0, 21, 1) 0%, rgba(69, 45, 45, 1) 100%);
+            background: #8E0D03;
             position: relative;
             overflow: hidden;
         }
@@ -151,7 +150,7 @@ background: radial-gradient(circle, rgba(181, 0, 21, 1) 0%, rgba(69, 45, 45, 1) 
 	    white-space: pre;
         }  
         
-         .hero-title-first {
+        .hero-title-first {
             font-family: 'Yesteryear', Yesteryear;
             font-size: 6rem;
             line-height: 1.5;
@@ -178,6 +177,17 @@ background: radial-gradient(circle, rgba(181, 0, 21, 1) 0%, rgba(69, 45, 45, 1) 
             box-shadow: 0 25px 50px rgba(0,0,0,0.3);
         }
 
+        .hero-logo {
+            display: flex;
+            justify-content: left;
+        }
+
+        .hero-logo img {
+            width: 100%;
+            max-width: 600px;
+           /* border-radius: 20px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.3); */
+	}
         .btn {
             display: inline-block;
             padding: 1rem 2rem;
@@ -227,13 +237,23 @@ background: radial-gradient(circle, rgba(181, 0, 21, 1) 0%, rgba(69, 45, 45, 1) 
             font-size: 2.5rem;
             text-align: center;
             margin-bottom: 1rem;
-            color: var(--primary);
+            color: var(--text-light);
+        }
+
+        .section-title-footer {
+            font-family: 'Libre Franklin', Libre+Franklin;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: var(--white);
         }
 
         .section-subtitle {
+
+            font-family: 'yesteryear', Yesteryear;
             text-align: center;
-            color: var(--text-light);
-            font-size: 1.1rem;
+            color: var(--primary);
+            font-size: 1.8rem;
             margin-bottom: 3rem;
         }
 
@@ -355,7 +375,7 @@ background: radial-gradient(circle, rgba(181, 0, 21, 1) 0%, rgba(69, 45, 45, 1) 
 
         .contact-text {
             font-size: 1.1rem;
-            color: var(--text-light);
+            color: var(--text-white);
             margin-bottom: 2rem;
             max-width: 600px;
             margin-left: auto;
@@ -372,7 +392,7 @@ background: radial-gradient(circle, rgba(181, 0, 21, 1) 0%, rgba(69, 45, 45, 1) 
 
         .contact-btn {
             background: var(--primary);
-            color: var(--bg);
+            color: var(--white);
         }
 
         .contact-btn:hover {
@@ -382,14 +402,14 @@ background: radial-gradient(circle, rgba(181, 0, 21, 1) 0%, rgba(69, 45, 45, 1) 
 
         /* CTA Section */
         .cta {
-background: #b50015;
-background: radial-gradient(circle, rgba(181, 0, 21, 1) 0%, rgba(69, 45, 45, 1) 100%);
-            color: var(--bg);
+            background: #8E0D03;
+            /*background: radial-gradient(circle, rgba(181, 0, 21, 1) 0%, rgba(69, 45, 45, 1) 100%);*/
+            color: var(--white);
             text-align: center;
         }
 
         .cta .section-title {
-            color: var(--bg);
+            color: var(--white);
         }
 
         .cta-text {
@@ -403,7 +423,7 @@ background: radial-gradient(circle, rgba(181, 0, 21, 1) 0%, rgba(69, 45, 45, 1) 
 
         .cta-paid-for-text {
             font-size:.9rem;
-            opacity: 0.9;
+            opacity: 1;
             margin-bottom: 0rem;
             max-width: 600px;
             margin-left: auto;
@@ -412,8 +432,8 @@ background: radial-gradient(circle, rgba(181, 0, 21, 1) 0%, rgba(69, 45, 45, 1) 
 
         /* Footer */
         footer {
-background: #b50015;
-background: radial-gradient(circle, rgba(181, 0, 21, 1) 0%, rgba(69, 45, 45, 1) 100%);
+            background: #b50015;
+            /*background: radial-gradient(circle, rgba(181, 0, 21, 1) 0%, rgba(69, 45, 45, 1) 100%);*/
             color: var(--white);
             padding: 3rem 2rem;
             text-align: center;
@@ -431,14 +451,14 @@ background: radial-gradient(circle, rgba(181, 0, 21, 1) 0%, rgba(69, 45, 45, 1) 
         }
 
         .footer-text {
-            opacity: 0.7;
+            opacity: 1;
             font-size: 0.9rem;
             margin-bottom: 1rem;
         }
 
         .paid-for {
             font-size: 0.8rem;
-            opacity: 0.5;
+            opacity: 1;
             margin-top: 2rem;
         }
 
@@ -533,7 +553,10 @@ background: radial-gradient(circle, rgba(181, 0, 21, 1) 0%, rgba(69, 45, 45, 1) 
         <div class="hero-container">
             <div class="hero-content">
                 <p class="hero-subtitle">Alderman Candidate - District 3, Burlington, Wisconsin</p>
-                <P class="hero-title">Katie Mooney</P>
+     <!-- <P class="hero-title">Katie Mooney</P> -->
+		<div class="hero-logo">
+                <img src="Logo Red Background White Letters.jpg" alt="Katie Mooney">
+            </div>
                 <p class="hero-tagline">Logical. Transparent. Responsive.</p>
                 <div class="hero-buttons">
                    <!-- <a href="#issues" class="btn btn-primary">Background</a>
@@ -544,7 +567,7 @@ background: radial-gradient(circle, rgba(181, 0, 21, 1) 0%, rgba(69, 45, 45, 1) 
             <div class="hero-image">
                 <img src="Pic.jpg" alt="Katie Mooney">
             </div>
-        </div>
+       </div>
     </section>
 
     <!-- About Section -->
@@ -555,7 +578,7 @@ background: radial-gradient(circle, rgba(181, 0, 21, 1) 0%, rgba(69, 45, 45, 1) 
             <div class="about-content">
                 <div class="about-text">
                     <p>Katie Mooney was born in Burlington, Wisconsin and spent her childhood in district three. In 2004 she graduated from Burlington High School and in 2006 she earned a Bachelor of Science in Mathematics-Statistics from UW-Whitewater.
-</p><p>Katie now lives on the west side of the city with her husband of 20 years and their three children.  Katie has been a homeschool educator for the past six years. She also founded and led a successful homeschool group for families in the Burlington area, ran an online resale shop, and worked as a software test engineer. 
+</p><p>Katie now lives on the west side of the city with her husband of 20 years and their three children.  Katie has been a homeschool educator for the past six years. She also founded a led a successful homeschool group for families in the Burlington area, ran an online resale shop, and worked as a software test engineer. 
 </p><p>In her free time Katie loves gardening, cooking, crocheting, camping, playing board games and learning new things.
 </p>
                 </div>
@@ -584,8 +607,8 @@ background: radial-gradient(circle, rgba(181, 0, 21, 1) 0%, rgba(69, 45, 45, 1) 
             <p class="section-subtitle">Fiscal Responsibility. Clear Communication.</p>
             <div class="priorities-content">
                 <div class="priorities-text">
-                     <p>Once elected to council, Katie would focus on fiscal responsibility. She intends to work with the city council and staff to ensure proper funding for what is essential to the maintenance of our city. For funding outside of necessity she will properly weigh the fiscal ramifications of those expenditures.  Setting up a reasonable budget is necessary; upholding that budget is vital.
-Katie would also like to maintain a two-way communication with the city residents which she represents. She values transparent and honest dialogue between elected officials and the citizens they represent. This type of communication ensures Burlington is the ideal place to live, work and thrive.
+                     <p>Once elected to council, Katie would focus on fiscal responsibility. She intends to work with the city council and staff to ensure proper funding for what is essential to the maintenance of our city while properly weighing the fiscal ramification of purchases outside of those not absolutely necessary.  Setting up a reasonable budgeting is necessary; sticking to that budget is vital.
+Katie would also like to maintain a two-way communication with the city residents which she represents. She values transparency and honesty to make Burlington the best place to live, work and thrive.
 
 </p>
                 </div>
@@ -649,6 +672,9 @@ Katie would also like to maintain a two-way communication with the city resident
                 <div class="contact-methods">
                     <a href="mailto:katie@mooney4burlington.com" class="btn contact-btn">Email Katie</a>
                 </div>
+                <!--<div class="contact-methods">
+                    <a href="mailto:katie@mooney4burlington.com" class="btn contact-btn">Email Katie</a> -->
+                </div>
             </div>
         </div>
     </section>
@@ -656,8 +682,8 @@ Katie would also like to maintain a two-way communication with the city resident
     <!--CTA Section  -->
  <section class="cta">
     <div class="section-container">
-       <h2 class="section-title">Vote Katie Mooney: District 3 Alderman</h2>
-       <h2 class="section-title">Tuesday, April 7th, 2026</h2>
+       <h2 class="section-title-footer">Vote Katie Mooney: District 3 Alderman</h2>
+       <h2 class="section-title-footer">Tuesday, April 7th, 2026</h2>
        <span class="cta-paid-for-text">Paid for by Katie M. Mooney</span>
    </div>
 
